@@ -1,0 +1,353 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* BODY  */
+body {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: $lightWeight;
+  min-width: 320px;
+}
+
+/* HEADER  */
+header {
+  display: flex;
+  padding: 53px 0px 10px 0px;
+
+  a {
+    display: none;
+  }
+
+}
+.active {
+  background-color:rgba(0, 0, 0, 0.2);
+}
+
+.search {
+  display: flex;
+  border: 1px solid $color-2;
+  border-radius: 25px;
+  padding: 8px;
+  width: 190px;
+  margin-top: 4px;
+
+  input {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+  }
+
+  button {
+    background-color: transparent;
+    color: $color-2;
+    border: none;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+h1,
+h2,
+.title,
+.date {
+  font-family: $font;
+}
+.blog-posts {
+  margin-bottom: 80px;
+  width: 100%;
+
+  .posts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .post {
+      height: 250px;
+      width: 49%;
+      margin: 6px 0px;
+
+      a {
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        // margin: 20px 10px 0px 0px;
+
+        .blog-info {
+          background-color: rgba(0, 0, 0, 0.5);
+          color: $color-1;
+          margin-top: -46.5px;
+          z-index: 999;
+          .title {
+            p {
+              margin: 5px;
+            }
+          }
+
+          .date {
+            p {
+              margin: 5px;
+            }
+          }
+        }
+
+        .img {
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 100%;
+          opacity: 75%;
+        }
+
+        .img:hover {
+          opacity: 100%;
+        }
+      }
+    }
+  }
+}
+
+#footerWrapper {
+  background-color: $color-3;
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font;
+
+    .sec-one {
+      display: flex;
+      flex-wrap: wrap;
+
+      .sec {
+        margin: 10px 0px;
+      }
+
+      .one {
+        width: 100%;
+        a {
+          text-decoration: none;
+          color: $color-2;
+        }
+        .contact {
+          font-size: 28px;
+          margin-bottom: 15px;
+        }
+        .contact:hover {
+          color: gray;
+        }
+        .company-name {
+          margin-bottom: 10px;
+          font-size: 22px;
+        }
+        .address {
+          margin-bottom: 10px;
+        }
+        .phone {
+          margin-bottom: 10px;
+          span {
+            font-size: 22px;
+          }
+        }
+        .hours {
+          span {
+            font-size: 22px;
+          }
+        }
+      }
+
+      .two {
+        width: 100%;
+        .news-letter {
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          input {
+            border: 1px solid $color-2;
+            border-radius: 25px;
+            padding: 8px;
+            margin: 10px 0px;
+            background-color: transparent;
+            text-decoration: none;
+          }
+
+          button {
+            border: 1px solid $color-2;
+            border-radius: 25px;
+            padding: 8px;
+            background-color: $color-1;
+            text-decoration: none;
+          }
+          button:hover {
+            background-color: transparent;
+            cursor: pointer;
+          }
+       
+        }
+      }
+
+      .three {
+        width: 100%;
+        .why {
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+        p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .sec-two {
+      padding: 10px;
+      i {
+        font-size: 24px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* booking page styles */
+
+.cruiseTitle {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 20px 3px;
+
+  label {
+    font-size: 12px;
+    font-style: italic;
+    margin: 20px 0px 5px 0px;
+  }
+
+  input, select {
+    height: 30px;
+    border: solid 1px $color-2;
+    border-radius: 5px;
+  }
+
+  #submit {
+    margin-top: 20px;
+    border-radius: 25px;
+    border: solid 1px $color-2;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 10px;
+    height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  #submit:hover {
+    cursor: pointer;
+    background-color: $color-2;
+    color: $color-1;
+  }
+}
+
+
+/* agents page styles */
+
+.agentName {
+  font-size: 30px;
+  margin: 20px 3px;
+}
+
+.agent {
+  display:flex;
+  flex-direction: column;
+  margin: 0px 3px;
+
+  .agentInfo {
+    .infoItem {
+      margin: 25px 0px;
+      .bold {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .phone a{
+        color: $color-2;
+        text-decoration: none;
+      }
+      .phone a:hover {
+        color: #006b60;
+      }
+    }
+  }
+}
+
+/* cruises page styles */
+
+.cruise {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 3px;
+
+  .cruiseInfo {
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .cruiseText {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    a {
+      background-color: transparent;
+      border: 1px solid $color-2;
+      color: $color-2;
+      text-decoration: none;
+      padding: 8px 0px;
+      border-radius: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 15px;
+    }
+
+    a:hover {
+      background-color: $color-2;
+      color: $color-1;
+    }
+  }
+}
+
+
+
+
